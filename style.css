@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header,footer{
+    background: linear-gradient(135deg,blue,goldenrod);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    color: gold;
+}
+header input{
+    height: 25px;
+    width: 35vw;
+    margin-left: auto;
+    border: 1px solid gold;
+    border-radius: 20px;
+}
+header button{
+    height: 25px;
+    width: 50px;
+    margin: 20px;
+    background-color: blue;
+    color: gold;
+    font-weight: 700;
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+header button:hover{
+    color:goldenrod;
+    cursor: pointer;
+}
+main{
+    width:auto;
+    height:82.56vh;
+    background: linear-gradient(135deg,goldenrod,blue);
+}
