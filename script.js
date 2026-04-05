@@ -14,6 +14,9 @@ async function searchweather(city){
     if(weather_data.cod==404){
         txt.innerHTML=`<p>Not Found!</p>`;
         img.src="./assets/404.png";
+        input.value="";
+        text.innerHTML="";
+        deg.innerHTML="";
         return;
     }
     deg.innerHTML=`${Math.round(weather_data.main.temp-273.15)}°C`;
@@ -39,12 +42,14 @@ async function searchweather(city){
         default:
             img.src="./assets/cloud.png";
     }
+    input.value="";
 };
 function handleSearch(){
     if(input.value.trim()===""){
         txt.innerHTML = `<p>Enter city name</p>`;
         img.src="./assets/404.png";
         deg.innerHTML=`0°C`;
+        input.value="";
         return;
     }
     searchweather(input.value);
